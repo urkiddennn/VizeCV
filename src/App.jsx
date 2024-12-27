@@ -1,10 +1,14 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HeroPage from "./views/HeroPage";
+import DashboardPage from "./views/Dashboard/DashboardPage";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<HeroPage />} />
+      <Route path="dashboard" element={<DashboardPage />} />
+    </Routes>
   );
 }
 
